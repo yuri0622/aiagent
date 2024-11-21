@@ -32,8 +32,12 @@ a = st.number_input(' 나이 입력 ', value=0)
 b = st.number_input('소득 입력',value=0)
 gender_dict = {'male':0, 'female':1, 'non-binary':2}
 c = st.selectbox('성별 선택', list(gender_dict.keys()))
+platform_dict = {'instagram':0, 'facebook':1, 'youtube':2}
+d = st.selectbox('주요 사용 SNS 선택', list(platformr_dict.keys()))
+demographics_dict = {'urban':0, 'suburban':1, 'rural':2}
+e = st.selectbox('', list(demographics_dict.keys()))
 
 if st.button('사용시간 예측'): 
-        input_data = [[a,b,c]]
+        input_data = [[a,b,c,d,e]]
         p = model.predict(input_data)
         st.write('인공지능의 예측 사용 시간은', p)
