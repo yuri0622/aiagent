@@ -30,7 +30,7 @@ st.write('**** 소득과 나이를 입력하고, 성별을 선택해주세요! '
 
 a = st.number_input(' 나이 입력 ', value=0) 
 b = st.number_input('소득 입력',value=0)
-c = st.selectbox('성별 선택' male:0, female:1, non-binary:2, [0,1,2])
+c = st.selectbox('성별 선택', male:0, female:1, non-binary:2, [0,1,2])
 
 if st.button('사용시간 예측'): 
         input_data = [[a,b,c]]
