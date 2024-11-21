@@ -3,7 +3,8 @@
 import streamlit as st
 
 # 1. 기계학습 모델 파일 로드
-
+import joblib
+model = joblib.load('pppp.pkl')
 
 # 2. 모델 설명
 st.title('다양한 변수에 따른 SNS 사용 시간 예측 에이전트')
@@ -18,10 +19,10 @@ st.write(' - 인공지능 모델 정확도 : -0.02')
 col1, col2 = st.columns(2)  
 with col1:
       st.subheader('데이터시각화1')
-      st.image('시각화1.png' )   # 이미지 불러오기
+      st.image('visualize_1.png' )   # 이미지 불러오기
 with col2:
       st.subheader('데이터시각화2')
-      st.image('시각화2.png' )   # 이미지 불러오기
+      st.image('visualize_income.png' )   # 이미지 불러오기
 
 # 4. 모델 활용
 st.subheader('모델 활용')
