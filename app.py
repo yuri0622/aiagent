@@ -63,3 +63,22 @@ if st.button('사용시간 예측'):
         input_data = [[a,gender,b,platform,demographics]]
         p = model.predict(input_data)
         st.write('인공지능의 예측 사용 시간은 약', p)
+
+
+
+
+
+
+import streamlit as st
+
+# HTML과 CSS를 사용하여 배경색을 핑크색으로 변경
+st.markdown(
+    """
+    <style>
+        .stApp {
+            background-color: pink;  # 배경 색을 핑크색으로 변경
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
