@@ -44,6 +44,6 @@ e = st.selectbox('', list(demographics_dict.keys()))
 demographics = demographics_dict[e]
 
 if st.button('사용시간 예측'): 
-        input_data = [[gender,b,a,platform,demographics]]
+        input_data = [[a,gender,b,platform,demographics]]
         p = model.predict(input_data)
         st.write('인공지능의 예측 사용 시간은', p)
