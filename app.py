@@ -6,6 +6,22 @@ import streamlit as st
 import joblib
 model = joblib.load('linear_regression_model.pkl')
 
+import hashlib
+
+def anonymize_user_id(user_id):
+
+    # 사용자 ID를 해싱하여 익명화
+
+    return hashlib.sha256(user_id.encode()).hexdigest()
+
+# 예시 데이터
+
+user_id = "user12345"
+
+anonymized_id = anonymize_user_id(user_id)
+
+print(f"익명화된 사용자 ID: {anonymized_id}")
+
 # 2. 모델 설명
 st.title('다양한 변수에 따른 SNS 사용 시간 예측 에이전트')
 st.subheader('모델 설명')
