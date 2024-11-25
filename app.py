@@ -23,7 +23,7 @@ anonymized_id = anonymize_user_id(user_id)
 print(f"익명화된 사용자 ID: {anonymized_id}")
 
 # 2. 모델 설명
-st.title('다양한 변수에 따른 SNS 사용 시간 예측 에이전트')
+st.title('SNS 사용 시간 예측 에이전트')
 st.subheader('모델 설명')
 st.write(' - 기계학습 알고리즘 : 선형 회귀 ')
 st.write(' - 학습 데이터 출처 : https://www.kaggle.com/datasets/imyjoshua/average-time-spent-by-a-user-on-social-media')
