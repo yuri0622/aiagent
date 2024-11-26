@@ -59,9 +59,14 @@ demographics_dict = {'urban':0, 'suburban':1, 'rural':2}
 e = st.selectbox('', list(demographics_dict.keys()))
 demographics = demographics_dict[e]
 
+if st.checkbox('?'):
+    go = true
+else:
+    go = false
+
 
 if st.button('사용시간 예측'): 
-    if st.checkbox('?'):
+    if go:
         input_data = [[a,gender,b,platform,demographics]]
         p = model.predict(input_data)
         st.write('인공지능의 예측 사용 시간은 약', p)
