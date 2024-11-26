@@ -59,17 +59,18 @@ demographics_dict = {'urban':0, 'suburban':1, 'rural':2}
 e = st.selectbox('', list(demographics_dict.keys()))
 demographics = demographics_dict[e]
 
+checkbox_btn = st.checkbox('?', value = false)
+
 if st.button('사용시간 예측'): 
+    if checkbox_btn:
         input_data = [[a,gender,b,platform,demographics]]
         p = model.predict(input_data)
         st.write('인공지능의 예측 사용 시간은 약', p)
+    else:
+        st.write('당신은 개인정보를 이용에 대해 책임질 준비가 되어있지 않군요! 당신에게는 정보를 제한합니다.')
 
 
 
-
-
-
-import streamlit as st
 
 # HTML과 CSS를 사용하여 배경색을 핑크색으로 변경
 st.markdown(
