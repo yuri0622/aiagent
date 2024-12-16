@@ -29,7 +29,7 @@ st.write(' - 기계학습 알고리즘 : 선형 회귀 ')
 st.write(' - 학습 데이터 출처 : https://www.kaggle.com/datasets/imyjoshua/average-time-spent-by-a-user-on-social-media')
 st.write(' - 훈련    데이터 : 700건')
 st.write(' - 테스트 데이터 : 300건')
-st.write(' - 인공지능 모델 정확도 : -0.02')
+st.write(' - 인공지능 모델 정확도 : -0.01')
 
 # 3. 데이터시각화
 col1, col2 = st.columns(2)  
